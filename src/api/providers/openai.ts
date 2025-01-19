@@ -36,7 +36,7 @@ export class OpenAiHandler implements ApiHandler {
 			messages: openAiMessages,
 			temperature: 0,
 			stream: true,
-			stream_options: { include_usage: true },
+			
 		})
 		for await (const chunk of stream) {
 			const delta = chunk.choices[0]?.delta
